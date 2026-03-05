@@ -101,7 +101,7 @@ class NativeUTPlugin(Plugin):
             elif args.command == "list":
                 return self.__handle_list_command(template_name, template)
             else:
-                return Err(f"Unsupported command: {args.command}")
+                return Err("Unsupported command", f"Unsupported command: {args.command}")
 
     def __handle_list_command(self, template_name, template):
         Log.info(f"Targets list for {template_name}")
